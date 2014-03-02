@@ -1,0 +1,39 @@
+.fltlblHolder{
+    position:relative;
+}
+
+.fltlbl{
+    opacity:1.0;
+    color:#4c97f8;
+    font-size:9px;
+    
+    position:absolute;
+    width:100%;
+    text-align:left;
+    
+    -moz-transition:margin-top .1s ease-in;
+    -o-transition:margin-top .1s ease-in;
+    -webkit-transition:margin-top .1s ease-in;
+    
+    -moz-transition:color .1s ease-in;
+    -o-transition:color .1s ease-in;
+    -webkit-transition:color .1s ease-in;
+    
+    -moz-transition:opacity .15s ease-in;
+    -o-transition:opacity .15s ease-in;
+    -webkit-transition:opacity .15s ease-in;
+    
+}
+.fltlbl.fltlblHide{
+    visibility:hidden;
+    opacity:0.0;
+    margin-top:10px;   
+}
+
+.fltlbl.active{
+    color:#4c97f8;
+}
+
+.fltlbl.inactive{
+    color:#C9C9C9;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Floatlabel Examples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="examples.css">
+        
+        <!-- load jQuery -->
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js" /></script>
+        
+        <!-- load floatTable and its css -->
+        <script src="/Users/torrobinson/floatlabel.js/floatlabel.jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="/Users/torrobinson/floatlabel.js/floatlable.jquery.css">
+        
+        <!-- Initiate floatTables on an element that contains input elements -->
+        <script type="text/javascript">
+            $( document ).ready(function() {
+               $('#example1').floatLabel({
+                    offsetx     : '3px'
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            <h1>floatlabel.js</h1>
+            Enter your name below:
+            <div id="example1">
+                <input type="text" id="fname" placeholder="First name" />   <br/>
+                <input type="text" id="mname" placeholder="Middle Name" />  <br/>
+                <input type="text" id="lname" placeholder="Last name" />    <br/>
+            </div>
+        </div>
+    </body>
+</html>

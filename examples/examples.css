@@ -1,0 +1,18 @@
+html{
+    font-family:sans-serif;
+}
+body{
+    text-align:center;
+}
+input{
+    border: solid 1px #B5B5B5;
+    outline:none;
+    font-size:15px;
+    margin-top:12px;
+    padding:5px;
+}
+#content{
+    width:500px;
+    margin:0 auto;
+    text-align:left;
+}
