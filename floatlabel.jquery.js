@@ -7,8 +7,7 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
     $.fn.floatLabel = function( options ) {
         var settings = $.extend({
             leftOffset     : '0',
-            topOffset      : '0',
-            customClass    : ''
+            topOffset      : '0'
         }, options);
 
        return this.each( function() {
@@ -26,16 +25,16 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
                     +parseInt($(this).css('border-top-width'),10)
                     +parseInt($(this).css('border-bottom-width'),10)
                     +parseInt($(this).css('padding-top'),10)
-                    +parseInt($(this).css('padding-bottom'),10);
+                    +parseInt($(this).css('padding-bottom'),10)
+                    -parseInt($(this).css('margin-top'),10);
                
                 //wrap and add label
                 $(this).wrap('<span class="fltlblHolder">');
                 $(this).before('<label for="'+$(this).attr('id')+'" class="fltlbl fltlblHide">'+$(this).attr('placeHolder')+'</label>');
                
-               $(this).prev('label').addClass(settings.customClass);
                $(this).prev('label').css({
                    left          :settings.leftOffset,
-                   top           :settings.topOffset,
+                   top           :parseInt(parseInt(settings.topOffset,10) + height*-1).toString()+'px',
                    animationSpeed:150
                });
                
@@ -52,7 +51,7 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
                 $(this).keyup(function(ev){
                     if($(this).val()!=''){
                         $(this).prev('label').css({display:'inline-block'}).animate({
-                            top:    settings.topOffset,
+                            top           :parseInt(parseInt(settings.topOffset,10) + height*-1).toString()+'px',
                             opacity: 1.0
                         },settings.animationSpeed);
                     }

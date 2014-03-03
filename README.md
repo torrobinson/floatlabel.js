@@ -30,9 +30,8 @@
 ```
 
 ### Optional parameters:
-You can pass the following optional parameters based on your preferences:
+You can pass the following optional parameters based on your input sizes and preferences:
 ```javascript
 leftOffset     : '0px',  //left attribute of label
-topOffset      : '-14px',//top attribute of label
-animationSpeed : 125     //how fast the label shows/hides
+topOffset      : '-14px'//top attribute of label
 ```
