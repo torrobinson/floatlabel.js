@@ -1,8 +1,11 @@
 <h1>floatlabel.js</h1>
 ![floatlabel](http://www.torrobinson.com/files/floatlabelgif2-BUEfAyKT0q.gif)
 
-<h2>Usage</h2>
-### Wrap inputs in a container
+<h3>Demo</h3>
+http://torrobinson.com/floatlabel/examples/examples.html
+
+<h3>Usage</h3>
+<h4>Wrap inputs in a container</h4>
 ```HTML
  <div id="example1">
                 <input type="text" id="fname" placeholder="First name"  />  <br/>
@@ -10,7 +13,7 @@
                 <input type="text" id="lname" placeholder="Last name"   />  <br/>
  </div>
 ```
-### Include jQuery and floatlabel
+<h4>Include jQuery and floatlabel</h4>
 ```HTML
   <!-- load jQuery -->
   <script src="http://code.jquery.com/jquery-2.1.0.min.js" /></script>
@@ -20,7 +23,7 @@
   <link rel="stylesheet" type="text/css" href="floatlable.jquery.css">
 ```
 
-### Initiate the plugin
+<h4>Initiate the plugin</h4>
 ```javascript
 <script type="text/javascript">
             $( document ).ready(function() {
@@ -29,7 +32,7 @@
 </script>
 ```
 
-### Optional parameters:
+<h4>Optional parameters:</h4>
 You can pass the following optional parameters based on your input sizes and preferences:
 
 | Option        | Description                                       | Default |
@@ -39,3 +42,6 @@ You can pass the following optional parameters based on your input sizes and pre
 | fontSize      | Font size of the label created                    | 9px     |
 | color         | Color of the label when it appears                |![color](http://www.torrobinson.com/files/image-GBn5Rti5fw.png)|
 | colorInactive | Color of the label when it is no longer active    |![color](http://www.torrobinson.com/files/image-sg1A2qEB2q.png)|
+
+<h4>Compatibility</h4>
+The plugin currently works on webkit browsers, especially though supporting the HTML5 "placeholder" attribute. IE 9 and below will have trouble with this. 
