@@ -8,11 +8,12 @@ input{
     border: solid 1px #B5B5B5;
     outline:none;
     font-size:15px;
-    margin-top:12px;
+    margin-top:17px;
     padding:5px;
+    width:100%;
 }
 #content{
-    width:500px;
+    width:200px;
     margin:0 auto;
     text-align:left;
 }
