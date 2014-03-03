@@ -1,5 +1,5 @@
 <h1>floatlabel.js</h1>
-![floatlabel](http://www.torrobinson.com/files/floatlabel-xab2RPp8YI.gif)
+![floatlabel](http://www.torrobinson.com/files/floatlabelgif2-BUEfAyKT0q.gif)
 
 <h2>Usage</h2>
 ### Wrap inputs in a container
