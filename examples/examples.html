@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Floatlabel Examples</title>
+        <title>floatlabel.js</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="examples.css">
@@ -18,16 +18,17 @@
         <!-- Initiate floatTables on an element that contains input elements -->
         <script type="text/javascript">
             $( document ).ready(function() {
-               $('#example1').floatLabel({
-                    leftOffset     : '0px',
-                    topOffset      : '-14px'
-                });
+                    $('#example1').floatLabel({
+                        leftOffset     : '0px',  //left attribute of label
+                        topOffset      : '-14px',//top attribute of label
+                        animationSpeed : 125     //how fast the label shows/hides
+                    });  
             });
         </script>
     </head>
     <body>
         <div id="content">
-            <h1>floatlabel.js</h1>            
+            <h1 style="text-align:center;">floatlabel.js</h1>            
             <div id="example1">
                 <input type="text" id="fname" placeholder="First name" />   <br/>
                 <input type="text" id="mname" placeholder="Middle Name" />  <br/>

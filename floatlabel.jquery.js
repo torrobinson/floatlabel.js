@@ -14,34 +14,53 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
        return this.each( function() {
            $(this).children('input').each(function(){
                
+               var width = parseInt($(this).css('width'),10) 
+                    +parseInt($(this).css('border-left-width'),10)
+                    +parseInt($(this).css('border-right-width'),10)
+                    +parseInt($(this).css('padding-left'),10)
+                    +parseInt($(this).css('padding-right'),10);
+               
+               var widthOnly = parseInt($(this).css('width'),10);
+               
+               var height = parseInt($(this).css('height'),10) 
+                    +parseInt($(this).css('border-top-width'),10)
+                    +parseInt($(this).css('border-bottom-width'),10)
+                    +parseInt($(this).css('padding-top'),10)
+                    +parseInt($(this).css('padding-bottom'),10);
+               
                 //wrap and add label
                 $(this).wrap('<span class="fltlblHolder">');
                 $(this).before('<label for="'+$(this).attr('id')+'" class="fltlbl fltlblHide">'+$(this).attr('placeHolder')+'</label>');
                
                $(this).prev('label').addClass(settings.customClass);
                $(this).prev('label').css({
-                   left :settings.leftOffset,
-                   top  :settings.topOffset
+                   left          :settings.leftOffset,
+                   top           :settings.topOffset,
+                   animationSpeed:150
                });
-               /////////////////////////
                
-               //transfer margins to the container
+               //transfer margins and width to the container
                $(this).parent('.fltlblHolder').css({
-                   margin:  $(this).css('margin')
+                   margin:  $(this).css('margin'),
+                   width:   width
                });
                $(this).css({'margin':0});
                $(this).prev('label').css({'top':'0px'});
-               ///////////////////////////////////
+               $(this).css({width:widthOnly});
                 
                //events
                 $(this).keyup(function(ev){
                     if($(this).val()!=''){
-                        $(this).prev('label').removeClass('fltlblHide'); 
-                        $(this).prev('label').css({'top':settings.topOffset});
+                        $(this).prev('label').css({display:'inline-block'}).animate({
+                            top:    settings.topOffset,
+                            opacity: 1.0
+                        },settings.animationSpeed);
                     }
                     else{
-                        $(this).prev('label').addClass('fltlblHide');
-                        $(this).prev('label').css({'top':'0px'});
+                         $(this).prev('label').animate({
+                            top:     '0px',
+                            opacity: 0.01
+                        },settings.animationSpeed);
                     }
                 });
                

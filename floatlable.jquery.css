@@ -1,83 +1,31 @@
 .fltlblHolder{
     position:relative;
     display:inline-block;
+    padding:0;
 }
 
 .fltlbl{
     top:0px;
-    opacity:1.0;
-    visibility:visible;
+    display:none;
+    opacity:0.01;
     color:#4c97f8;
     font-size:9px;
     
     position:absolute;
     width:100%;
     text-align:left;
-    
-    -webkit-animation-duration: 0.2s;
-    -webkit-animation-name: fadeInFromNone;
-
 }
-
-.fltlbl.fltlblHide{
-    display:none;
-    -moz-transition: top ease-out 0.15s;
-    -webkit-transition: top ease-out 0.15s;
-    -o-transition: top ease-out 0.15s;
-    transition: top ease-out 0.15s;
-
-    -webkit-animation-duration: 0.2s;
-    -webkit-animation-name: fadeOutFromIn;
-    
-}
-
-.fltlbl:not(.fltlblHide){
-    
-}
-
 .fltlbl.active{
     color:#4c97f8;
-        -moz-transition:color .15s ease-in;
+    -moz-transition:color .15s ease-in;
     -o-transition:color .15s ease-in;
     -webkit-transition:color .15s ease-in;
 }
 
 .fltlbl.inactive{
     color:#C9C9C9;
-        -moz-transition:color .15s ease-in;
+    -moz-transition:color .15s ease-in;
     -o-transition:color .15s ease-in;
     -webkit-transition:color .15s ease-in;
 }
 
-@-webkit-keyframes fadeInFromNone {
-    0% {
-        display:none; 
-        opacity: 0;
-    }
-
-    1% {
-        display: block ; 
-        opacity: 0;
-    }
-
-    100% {
-        display: block ; 
-        opacity: 1;
-    }
-}
-@-webkit-keyframes fadeOutFromIn {
-    0% {
-        display:block; 
-        opacity: 1;
-    }
-
-    1% {
-        display: block ; 
-        opacity: 1;
-    }
-
-    100% {
-        display: none ; 
-        opacity: 0;
-    }
-}

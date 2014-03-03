@@ -10,7 +10,7 @@ input{
     font-size:15px;
     margin-top:17px;
     padding:5px;
-    width:100%;
+   /* width:90%;*/
 }
 #content{
     width:200px;
