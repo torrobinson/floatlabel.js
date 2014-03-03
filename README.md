@@ -37,5 +37,5 @@ You can pass the following optional parameters based on your input sizes and pre
 | leftOffset    | Left offset. Use for adjusting label positioning. | 0px     |
 | topOffset     | Top offset. Use for adjusting label positioning.  | 0px     |
 | fontSize      | Font size of the label created                    | 9px     |
-| color         | Color of the label when it appears                |![color](http://www.torrobinson.com/files/image-sg1A2qEB2q.png)|
-| colorInactive | Color of the label when it is no longer active    |![color](http://www.torrobinson.com/files/image-GBn5Rti5fw.png)|
+| color         | Color of the label when it appears                |![color](http://www.torrobinson.com/files/image-GBn5Rti5fw.png)|
+| colorInactive | Color of the label when it is no longer active    |![color](http://www.torrobinson.com/files/image-sg1A2qEB2q.png)|
