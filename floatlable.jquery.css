@@ -1,29 +1,21 @@
-.fltlblHolder{
-    position:relative;
-    display:inline-block;
-    padding:0;
-}
-
-.fltlbl{
-    top:0px;
-    display:none;
-    opacity:0.01;
-    color:#4c97f8;
-    font-size:9px;
-    
+.floatLabel{
+    color:#0b7dfd;
     position:absolute;
     width:100%;
     text-align:left;
-}
-.fltlbl.active{
-    color:#4c97f8;
+    top:0px;
+    display:none;
+    opacity:0.01;
     -moz-transition:color .15s ease-in;
     -o-transition:color .15s ease-in;
     -webkit-transition:color .15s ease-in;
 }
-
-.fltlbl.inactive{
-    color:#C9C9C9;
+.floatLabelHolder{
+    position:relative;
+    display:inline-block;
+    padding:0;
+}
+.floatLabel.inactive{
     -moz-transition:color .15s ease-in;
     -o-transition:color .15s ease-in;
     -webkit-transition:color .15s ease-in;
