@@ -13,7 +13,11 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
             colorInactive  : '#C9C9C9'
         }, options);
         
-        var usePHFallback = !'placeholder' in document.createElement('input'); 
+        jQuery.support.placeholder = (function(){
+            var i = document.createElement('input');
+            return 'placeholder' in i;
+        })();
+        
         
         return this.each( function() {
            $(this).children('input').each(function(){
@@ -33,11 +37,11 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
                    'color'       :settings.colorInactive
                });
                
-               if(usePHFallback){
+               if(!jQuery.support.placeholder){
                     $(this).before('<span class="placeholder">'+$(this).attr('placeHolder')+'</span>');
                     $(this).siblings('.placeholder').css({
-                        'margin-left': parseInt($(this).css('padding-left'),10) + parseInt($(this).css('border-left'),10),
-                        'margin-top': parseInt($(this).css('padding-top'),10) + parseInt($(this).css('border-top'),10),
+                        'left': (parseInt($(this).css('padding-left'),10) + parseInt($(this).css('border-left-width'),10))+'px',
+                        'top': (parseInt($(this).css('padding-top'),10) + parseInt($(this).css('border-top-width'),10))+'px',
                     });
                    
                    //passthrough click events
@@ -64,14 +68,14 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
                //bind events
                 $(this).keyup(function(ev){
                     if($(this).val()!=''){
-                        if(usePHFallback) $(this).siblings('.placeholder').hide();
+                        if(!jQuery.support.placeholder) $(this).siblings('.placeholder').hide();
                         $(this).siblings('label').css({display:'inline-block'}).animate({
                             top    :height,
                             opacity: 1.0
                         },settings.animationSpeed);
                     }
                     else{
-                         if(usePHFallback) $(this).siblings('.placeholder').show();
+                         if(!jQuery.support.placeholder) $(this).siblings('.placeholder').show();
                          $(this).siblings('label').animate({
                             top    : '0px',
                             opacity: 0.01
