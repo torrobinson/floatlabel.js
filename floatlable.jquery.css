@@ -21,3 +21,16 @@
     -webkit-transition:color .15s ease-in;
 }
 
+.placeholder{
+    position:absolute;
+    width:100%;
+    text-align:left;
+    top:0px;
+    left:0px;
+    cursor:text;
+    color:#a9a9a9;
+}
+.placeholder::selection {
+	background: rgba(0,0,0,0);
+    pointer-events:none;
+}

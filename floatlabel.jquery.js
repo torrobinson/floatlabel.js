@@ -12,7 +12,10 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
             color          : '#0b7dfd',
             colorInactive  : '#C9C9C9'
         }, options);
-       return this.each( function() {
+        
+        var usePHFallback = !'placeholder' in document.createElement('input'); 
+        
+        return this.each( function() {
            $(this).children('input').each(function(){
                var width = $(this).outerWidth();
                var widthOnly = parseInt($(this).css('width'),10);
@@ -23,12 +26,26 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
                 $(this).wrap('<span class="floatLabelHolder">');
                 $(this).before('<label for="'+$(this).attr('id')+'" class="floatLabel floatLabelHide">'+$(this).attr('placeHolder')+'</label>');
                
-               $(this).prev('label').css({
+               $(this).siblings('label').css({
                    left          :settings.leftOffset,
                    top           :height,
                    'font-size'   :settings.fontSize,
                    'color'       :settings.colorInactive
                });
+               
+               if(usePHFallback){
+                    $(this).before('<span class="placeholder">'+$(this).attr('placeHolder')+'</span>');
+                    $(this).siblings('.placeholder').css({
+                        'margin-left': parseInt($(this).css('padding-left'),10) + parseInt($(this).css('border-left'),10),
+                        'margin-top': parseInt($(this).css('padding-top'),10) + parseInt($(this).css('border-top'),10),
+                    });
+                   
+                   //passthrough click events
+                   $(this).siblings('.placeholder').click(function(e){
+                        $(this).siblings('input').focus();
+                   });
+                   
+               }
                
                //transfer input width and margin to container
                $(this).parent('.floatLabelHolder').css({
@@ -44,13 +61,15 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
                //bind events
                 $(this).keyup(function(ev){
                     if($(this).val()!=''){
-                        $(this).prev('label').css({display:'inline-block'}).animate({
+                        if(usePHFallback) $(this).siblings('.placeholder').hide();
+                        $(this).siblings('label').css({display:'inline-block'}).animate({
                             top    :height,
                             opacity: 1.0
                         },settings.animationSpeed);
                     }
                     else{
-                         $(this).prev('label').animate({
+                         if(usePHFallback) $(this).siblings('.placeholder').show();
+                         $(this).siblings('label').animate({
                             top    : '0px',
                             opacity: 0.01
                         },settings.animationSpeed);
@@ -58,10 +77,10 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
                 });
                
                $(this).focus(function(){
-                    $(this).prev('label').removeClass('inactive').css('color',settings.color);
+                    $(this).siblings('label').removeClass('inactive').css('color',settings.color);
                });
                $(this).blur(function(){
-                    $(this).prev('label').removeClass('active').css('color',settings.colorInactive);
+                    $(this).siblings('label').removeClass('active').css('color',settings.colorInactive);
                });               
            });
         });
