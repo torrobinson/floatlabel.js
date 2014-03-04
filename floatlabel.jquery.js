@@ -49,7 +49,10 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
                
                //transfer input width and margin to container
                $(this).parent('.floatLabelHolder').css({
-                   margin:  $(this).css('margin'),
+                   'margin-top':  $(this).css('margin-top'),
+                   'margin-right':  $(this).css('margin-right'),
+                   'margin-bottom':  $(this).css('margin-bottom'),
+                   'margin-left':  $(this).css('margin-left'),
                    width:   width
                });
                $(this).prev('label').css({'top':'0px'});
