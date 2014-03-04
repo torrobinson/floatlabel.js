@@ -44,4 +44,4 @@ You can pass the following optional parameters based on your input sizes and pre
 | colorInactive | Color of the label when it is no longer active    |![color](http://www.torrobinson.com/files/image-sg1A2qEB2q.png)|
 
 <h4>Compatibility</h4>
-The plugin currently works on webkit browsers, especially though supporting the HTML5 "placeholder" attribute. IE 9 and below will have trouble with this. 
+The plugin currently works on webkit browsers by default, and a fallback method to support the 'placeholder' attribute has been added to support older browsers (read: IE) which might not support placeholders.
