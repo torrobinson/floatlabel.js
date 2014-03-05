@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Floatlabel.js by torrobinson</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Floatlabel.js</h1>
+        <p>Tiny jQuery implementation of the Float Labels design pattern</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/torrobinson/floatlabel.js" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/torrobinson/floatlabel.js/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/torrobinson/floatlabel.js/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>
+<a name="floatlabeljs" class="anchor" href="#floatlabeljs"><span class="octicon octicon-link"></span></a>floatlabel.js</h1>
+
+<p><img src="http://www.torrobinson.com/files/floatlabelgif2-BUEfAyKT0q.gif" alt="floatlabel"></p>
+
+<h3>
+<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h3>
+
+<p><a href="http://torrobinson.com/floatlabel/examples/examples.html">http://torrobinson.com/floatlabel/examples/examples.html</a></p>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+<h4>
+<a name="wrap-inputs-in-a-container" class="anchor" href="#wrap-inputs-in-a-container"><span class="octicon octicon-link"></span></a>Wrap inputs in a container</h4>
+
+<div class="highlight highlight-HTML"><pre> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"example1"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"fname"</span> <span class="na">placeholder=</span><span class="s">"First name"</span>  <span class="nt">/&gt;</span>  <span class="nt">&lt;br/&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"mname"</span> <span class="na">placeholder=</span><span class="s">"Middle Name"</span> <span class="nt">/&gt;</span>  <span class="nt">&lt;br/&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"lname"</span> <span class="na">placeholder=</span><span class="s">"Last name"</span>   <span class="nt">/&gt;</span>  <span class="nt">&lt;br/&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<h4>
+<a name="include-jquery-and-floatlabel" class="anchor" href="#include-jquery-and-floatlabel"><span class="octicon octicon-link"></span></a>Include jQuery and floatlabel</h4>
+
+<div class="highlight highlight-HTML"><pre>  <span class="c">&lt;!-- load jQuery --&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-2.1.0.min.js"</span> <span class="nt">/&gt;&lt;/script&gt;</span>
+
+  <span class="c">&lt;!-- load floatTable and its css --&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"floatlabel.jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"floatlable.jquery.css"</span><span class="nt">&gt;</span>
+</pre></div>
+
+<h4>
+<a name="initiate-the-plugin" class="anchor" href="#initiate-the-plugin"><span class="octicon octicon-link"></span></a>Initiate the plugin</h4>
+
+<div class="highlight highlight-javascript"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>
+            <span class="nx">$</span><span class="p">(</span> <span class="nb">document</span> <span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s1">'#example1'</span><span class="p">).</span><span class="nx">floatLabel</span><span class="p">();</span>  
+            <span class="p">});</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+</pre></div>
+
+<h4>
+<a name="optional-parameters" class="anchor" href="#optional-parameters"><span class="octicon octicon-link"></span></a>Optional parameters:</h4>
+
+<p>You can pass the following optional parameters based on your input sizes and preferences:</p>
+
+<table>
+<thead><tr>
+<th>Option</th>
+<th>Description</th>
+<th align="center">Default</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>leftOffset</td>
+<td>Left offset. Use for adjusting label positioning.</td>
+<td align="center">0px</td>
+</tr>
+<tr>
+<td>topOffset</td>
+<td>Top offset. Use for adjusting label positioning.</td>
+<td align="center">0px</td>
+</tr>
+<tr>
+<td>fontSize</td>
+<td>Font size of the label created</td>
+<td align="center">9px</td>
+</tr>
+<tr>
+<td>color</td>
+<td>Color of the label when it appears</td>
+<td align="center"><img src="http://www.torrobinson.com/files/image-GBn5Rti5fw.png" alt="color"></td>
+</tr>
+<tr>
+<td>colorInactive</td>
+<td>Color of the label when it is no longer active</td>
+<td align="center"><img src="http://www.torrobinson.com/files/image-sg1A2qEB2q.png" alt="color"></td>
+</tr>
+</tbody>
+</table><h4>
+<a name="compatibility" class="anchor" href="#compatibility"><span class="octicon octicon-link"></span></a>Compatibility</h4>
+
+<p>The plugin currently works on webkit browsers by default, and a fallback method to support the 'placeholder' attribute has been added to support older browsers (read: IE) which might not support placeholders.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/torrobinson">torrobinson</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
