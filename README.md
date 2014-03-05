@@ -1,5 +1,8 @@
-<h1>floatlabel.js</h1>
-![floatlabel](http://www.torrobinson.com/files/floatlabelgif2-BUEfAyKT0q.gif)
+<h1 align="center">floatlabel.js</h1>
+<p align="center">
+  <img src="http://www.torrobinson.com/files/floatlabelgif2-BUEfAyKT0q.gif" />
+</p>
+
 
 <h3>Demo</h3>
 http://torrobinson.com/floatlabel/examples/examples.html
@@ -25,11 +28,9 @@ http://torrobinson.com/floatlabel/examples/examples.html
 
 <h4>Initiate the plugin</h4>
 ```javascript
-<script type="text/javascript">
-            $( document ).ready(function() {
-                    $('#example1').floatLabel();  
-            });
-</script>
+$( document ).ready(function() {
+     $('#example1').floatLabel();  
+});
 ```
 
 <h4>Optional parameters:</h4>
@@ -44,4 +45,4 @@ You can pass the following optional parameters based on your input sizes and pre
 | colorInactive | Color of the label when it is no longer active    |![color](http://www.torrobinson.com/files/image-sg1A2qEB2q.png)|
 
 <h4>Compatibility</h4>
-The plugin currently works on webkit browsers by default, and a fallback method to support the 'placeholder' attribute has been added to support older browsers (read: IE) which might not support placeholders.
+Chrome, Opera, Firefox, Safari, and IE9+ should work no problem with floatlabels.js
