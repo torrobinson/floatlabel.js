@@ -3,6 +3,11 @@ floatlabel.js
 Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/1254439--GIF-Float-Label-Form-Interaction)
 */
 
+jQuery.support.placeholder = (function(){
+            var i = document.createElement('input');
+            return 'placeholder' in i;
+        })();
+
 (function($) {
     $.fn.floatLabel = function( options ) {
         var settings = $.extend({
@@ -10,15 +15,9 @@ Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/125
             topOffset      : '0px',
             fontSize       : '9px',
             color          : '#0b7dfd',
-            colorInactive  : '#C9C9C9'
+            colorInactive  : '#c9c9c9'
         }, options);
-        
-        jQuery.support.placeholder = (function(){
-            var i = document.createElement('input');
-            return 'placeholder' in i;
-        })();
-        
-        
+
         return this.each( function() {
            $(this).children('input').each(function(){
                var width = $(this).outerWidth();
