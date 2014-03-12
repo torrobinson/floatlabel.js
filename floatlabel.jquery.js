@@ -24,7 +24,7 @@ jQuery.support.placeholder = (function(){
         }, options);
 
         return this.each( function() {
-           $(this).children('input').each(function(){
+           $(this).find('input').each(function(){
                var width = $(this).outerWidth();
                var widthOnly = parseInt($(this).css('width'),10);
                var height = $(this).outerHeight() - parseInt($(this).css('margin-top'),10)+parseInt($(this).css('margin-bottom'),10);
