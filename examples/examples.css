@@ -9,9 +9,6 @@ body{
     margin:0 auto;
     text-align:left;
 }
-#example1{
-    margin-bottom:30px;
-}
 #example1 input{
     border: solid 1px #B5B5B5;
     outline:none;
