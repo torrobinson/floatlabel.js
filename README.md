@@ -23,7 +23,7 @@ http://torrobinson.com/floatlabel/examples/examples.html
        
   <!-- load floatTable and its css -->
   <script src="floatlabel.jquery.js"></script>
-  <link rel="stylesheet" type="text/css" href="floatlable.jquery.css">
+  <link rel="stylesheet" type="text/css" href="floatlabel.jquery.css">
 ```
 
 <h4>Initiate the plugin</h4>
@@ -44,6 +44,17 @@ You can pass the following optional parameters based on your input sizes and pre
 | color         | Color of the label when it appears                |![color](http://www.torrobinson.com/files/image-GBn5Rti5fw.png)|
 | colorInactive | Color of the label when it is no longer active    |![color](http://www.torrobinson.com/files/image-sg1A2qEB2q.png)|
 | animationSpeed| How long the label shows/hides for (in milliseconds)| 125   |
+
+Options are passed like so:
+```javascript
+$( document ).ready(function() {
+     $('#example1').floatLabel({
+                        option1     : 'value',
+                        option2     : 'value2',
+                          ...etc
+                    });   
+});
+```
 
 <h4>Compatibility</h4>
 Chrome, Opera, Firefox, Safari, and IE9+ should work no problem with floatlabels.js
