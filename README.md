@@ -43,6 +43,7 @@ You can pass the following optional parameters based on your input sizes and pre
 | fontSize      | Font size of the label created                    | 9px     |
 | color         | Color of the label when it appears                |![color](http://www.torrobinson.com/files/image-GBn5Rti5fw.png)|
 | colorInactive | Color of the label when it is no longer active    |![color](http://www.torrobinson.com/files/image-sg1A2qEB2q.png)|
+| animationSpeed| How long the label shows/hides for (in milliseconds)| 125   |
 
 <h4>Compatibility</h4>
 Chrome, Opera, Firefox, Safari, and IE9+ should work no problem with floatlabels.js
