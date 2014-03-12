@@ -60,7 +60,7 @@
 
   <span class="c">&lt;!-- load floatTable and its css --&gt;</span>
   <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"floatlabel.jquery.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"floatlable.jquery.css"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"floatlabel.jquery.css"</span><span class="nt">&gt;</span>
 </pre></div>
 
 <h4>
@@ -108,8 +108,24 @@
 <td>Color of the label when it is no longer active</td>
 <td align="center"><img src="http://www.torrobinson.com/files/image-sg1A2qEB2q.png" alt="color"></td>
 </tr>
+<tr>
+<td>animationSpeed</td>
+<td>How long the label shows/hides for (in milliseconds)</td>
+<td align="center">125</td>
+</tr>
 </tbody>
-</table><h4>
+</table><p>Options are passed like so:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span> <span class="nb">document</span> <span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+     <span class="nx">$</span><span class="p">(</span><span class="s1">'#example1'</span><span class="p">).</span><span class="nx">floatLabel</span><span class="p">({</span>
+                        <span class="nx">option1</span>     <span class="o">:</span> <span class="s1">'value'</span><span class="p">,</span>
+                        <span class="nx">option2</span>     <span class="o">:</span> <span class="s1">'value2'</span><span class="p">,</span>
+                          <span class="p">...</span><span class="nx">etc</span>
+                    <span class="p">});</span>   
+<span class="p">});</span>
+</pre></div>
+
+<h4>
 <a name="compatibility" class="anchor" href="#compatibility"><span class="octicon octicon-link"></span></a>Compatibility</h4>
 
 <p>Chrome, Opera, Firefox, Safari, and IE9+ should work no problem with floatlabels.js</p>
