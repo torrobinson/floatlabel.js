@@ -1,6 +1,11 @@
 /*
 floatlabel.js
-Based on the float label pattern by Matt D. Smith (http://dribbble.com/shots/1254439--GIF-Float-Label-Form-Interaction)
+https://github.com/torrobinson/floatlabel.js
+by Tor Robinson
+
+Based on the float label pattern 
+by Matt D. Smith 
+http://dribbble.com/shots/1254439--GIF-Float-Label-Form-Interaction
 */
 
 jQuery.support.placeholder = (function(){
