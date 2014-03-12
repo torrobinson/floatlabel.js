@@ -23,7 +23,7 @@ jQuery.support.placeholder = (function(){
             animationSpeed: 125
         }, options);
         return this.each( function() {
-           $(this).find('input').each(function(){
+           $(this).find('input[type=text],input[type=password]').each(function(){
                var width = $(this).outerWidth();
                var widthOnly = parseInt($(this).css('width'),10);
                var height = $(this).outerHeight() - parseInt($(this).css('margin-top'),10)+parseInt($(this).css('margin-bottom'),10);
