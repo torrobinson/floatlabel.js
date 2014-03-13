@@ -22,6 +22,15 @@ jQuery.support.placeholder = (function(){
             colorInactive  : '#c9c9c9',
             animationSpeed: 125
         }, options);
+        
+        function showLabel(el,height,animate){
+            if(!jQuery.support.placeholder) $(el).siblings('.placeholder').hide();
+                            $(el).siblings('label').css({display:'inline-block'}).animate({
+                                top    :height,
+                                opacity: 1.0
+                            },animate?settings.animationSpeed:0);
+        }
+        
         return this.each( function() {
            $(this).find('input[type=text],input[type=password]').each(function(){
                var width = $(this).outerWidth();
@@ -41,7 +50,7 @@ jQuery.support.placeholder = (function(){
                     $(this).before('<span class="placeholder">'+$(this).attr('placeHolder')+'</span>');
                     $(this).siblings('.placeholder').css({
                         'left': (parseInt($(this).css('padding-left'),10) + parseInt($(this).css('border-left-width'),10))+'px',
-                        'top': (parseInt($(this).css('padding-top'),10) + parseInt($(this).css('border-top-width'),10))+'px',
+                        'top': (parseInt($(this).css('padding-top'),10) + parseInt($(this).css('border-top-width'),10))+'px'
                     });
                    //passthrough click events
  $(this).siblings('.placeholder').click(function(){
@@ -61,15 +70,13 @@ jQuery.support.placeholder = (function(){
                    width:widthOnly,
                    'margin':0
                });
-                
-               //bind events
+               //Apply to anything with text, immediately
+               if($(this).val()!==''){showLabel(this,height,false);}
+               
+               //bind events for everything else
                 $(this).keyup(function(){
                     if($(this).val()!==''){
-                        if(!jQuery.support.placeholder) $(this).siblings('.placeholder').hide();
-                        $(this).siblings('label').css({display:'inline-block'}).animate({
-                            top    :height,
-                            opacity: 1.0
-                        },settings.animationSpeed);
+                        showLabel(this,height,true);
                     }
                     else{
                          if(!jQuery.support.placeholder) $(this).siblings('.placeholder').show();
