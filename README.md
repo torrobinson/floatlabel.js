@@ -5,6 +5,7 @@ http://torrobinson.com/floatlabel/examples/examples.html
 
 <h3>Usage</h3>
 <h4>Wrap inputs in a container</h4>
+
 ```HTML
  <div id="example1">
                 <input type="text" id="fname" placeholder="First name"  />  <br/>
@@ -23,6 +24,7 @@ http://torrobinson.com/floatlabel/examples/examples.html
 ```
 
 <h4>Initiate the plugin</h4>
+
 ```javascript
 $( document ).ready(function() {
      $('#example1').floatLabel();  
