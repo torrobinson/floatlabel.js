@@ -13,7 +13,9 @@ http://torrobinson.com/floatlabel/examples/examples.html
                 <input type="text" id="lname" placeholder="Last name"   />  <br/>
  </div>
 ```
+
 <h4>Include jQuery and floatlabel</h4>
+
 ```HTML
   <!-- load jQuery -->
   <script src="http://code.jquery.com/jquery-2.1.0.min.js" /></script>
@@ -44,6 +46,7 @@ You can pass the following optional parameters based on your input sizes and pre
 | animationSpeed| How long the label shows/hides for (in milliseconds)| 125   |
 
 Options are passed like so:
+
 ```javascript
 $( document ).ready(function() {
      $('#example1').floatLabel({
