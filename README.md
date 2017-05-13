@@ -1,8 +1,4 @@
 <h1 align="center">floatlabel.js</h1>
-<p align="center">
-  <img src="http://www.torrobinson.com/files/floatlabelgif2-BUEfAyKT0q.gif" />
-</p>
-
 
 <h3>Demo</h3>
 http://torrobinson.com/floatlabel/examples/examples.html
@@ -41,8 +37,8 @@ You can pass the following optional parameters based on your input sizes and pre
 | leftOffset    | Left offset. Use for adjusting label positioning. | 0px     |
 | topOffset     | Top offset. Use for adjusting label positioning.  | 0px     |
 | fontSize      | Font size of the label created                    | 9px     |
-| color         | Color of the label when it appears                |![color](http://www.torrobinson.com/files/image-GBn5Rti5fw.png)|
-| colorInactive | Color of the label when it is no longer active    |![color](http://www.torrobinson.com/files/image-sg1A2qEB2q.png)|
+| color         | Color of the label when it appears                ||
+| colorInactive | Color of the label when it is no longer active    ||
 | animationSpeed| How long the label shows/hides for (in milliseconds)| 125   |
 
 Options are passed like so:
